@@ -1,3 +1,4 @@
 #!/bin/bash
-echo "cp random.html /home/vagrant/holberton-system_engineering-devops"
+
+cp *.html /home/vagrant/holberton-system_engineering-devops
 

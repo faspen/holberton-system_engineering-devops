@@ -1,3 +1,4 @@
 #!/bin/bash
-echo "ls . .. /boot -l"
+
+ls . .. /boot -l
 
