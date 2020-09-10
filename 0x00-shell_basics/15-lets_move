@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "mv [[:upper:]] /tmp/u"
+
