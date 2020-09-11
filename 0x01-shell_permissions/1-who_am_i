@@ -1,5 +1,2 @@
-#!/bin/bash
-
-who
-
-
+#!/bin/bash 
+who /n

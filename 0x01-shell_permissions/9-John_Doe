@@ -1,14 +1,2 @@
 #!/bin/bash
-
-chmod u+x hello
-
-chmod g+x hello
-
-chmod g-w hello
-
-chmod o-r hello
-
-chmod o+w hello
-
-chmod o+x hello
-
+chmod 753 hello

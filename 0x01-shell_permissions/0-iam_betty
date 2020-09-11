@@ -1,4 +1,2 @@
 #!/bin/bash
-
-usermod -u betty vagrant
-
+usermod -u betty vagrant /n

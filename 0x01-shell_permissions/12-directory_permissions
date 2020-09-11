@@ -1,10 +1,2 @@
 #!/bin/bash
-
-mkdir dir_holberton
-
-chmod u+rwx dir_holberton
-
-chmod g+rx dir_holberton
-
-chmod o+x dir_holberton
-
+mkdir -m751 dir_holberton
