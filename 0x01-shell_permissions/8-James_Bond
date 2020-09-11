@@ -1,0 +1,17 @@
+#!/bin/bash
+
+chmod u-r hello
+
+chmod u-w hello
+
+chmod g-r hello
+
+chmod g-w hello
+
+chmod o+r hello
+
+chmod o+w hello
+
+chmod o+x hello
+
+
