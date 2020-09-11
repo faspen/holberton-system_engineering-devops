@@ -1,4 +1,2 @@
 #!/bin/bash
-
 cp *.html /home/vagrant/holberton-system_engineering-devops
-
