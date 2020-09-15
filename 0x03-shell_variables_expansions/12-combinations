@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {a..z}{a..z} | cut -b 1-1134,1138-2028  
+echo -1 {a..z}{a..z} | tr ' ' \\\n | grep -v "oo" \  
