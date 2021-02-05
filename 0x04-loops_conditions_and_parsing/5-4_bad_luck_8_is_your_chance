@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Script that prints "Holberton School" with special phrases on 4 and 8
+
+i=0
+
+while ((i<10));do
+	if ((i==4));then
+		echo "bad luck"
+	elif ((i==8));then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+	((i++))
+done
