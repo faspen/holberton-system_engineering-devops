@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Display contents of pwd in list format
+
+cmd=$(ls)
+for i in $cmd;do
+	echo "$i" | cut -f 2- -d '-'
+done
