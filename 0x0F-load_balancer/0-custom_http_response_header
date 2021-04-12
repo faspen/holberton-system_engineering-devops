@@ -28,4 +28,4 @@ printf %s "server {
 	}
 }
 " | sudo tee /etc/nginx/sites-available/default
-sudo server nginx restart
+sudo service nginx restart
