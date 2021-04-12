@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Configure new nginx server
+
+
+sudo apt-get update
+sudo apt-get install -y nginx
+sudo service nginx start
+
+sudo mkdir -p /var/www/html
+sudo touch /var/www/html/index.html
+echo "Holberton School" | sudo tee /var/www/html/index.html
+sudo touch /var/www/html/error404.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/error404.html
+
+printf %s "server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+	add_header X-Served-By $HOSTNAME;
+	root /var/www/html;
+	index index.html index.htm;
+	location /redirect_me {
+		return 301 https://www.youtube.com/watch?v=GM-e46xdcUo&list=LL&index=10;
+		}
+	error_page 404 /error404.html;
+	location /404 {
+		root /var/www/html;
+		internal;
+	}
+}
+" | sudo tee /etc/nginx/sites-available/default
+sudo server nginx restart
