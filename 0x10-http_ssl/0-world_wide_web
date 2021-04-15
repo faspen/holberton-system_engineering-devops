@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Display subdomain info
+
+
+show_func() {
+	echo -n "The subdomain $2"
+	dig "$2.$1" | grep -A1 "ANSWER SECTION:" | tail -n1 | awk '{ print " is a " $4 " record and points to " $5 }'
+}
+
+if [ $# -eq 2 ]; then
+	show_func "$1" "$2"
+else
+	for sub in www lb-01 web-01 web-02; do
+		show_func "$1" "$sub"
+	done
+fi
