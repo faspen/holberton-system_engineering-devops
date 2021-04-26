@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Change user
+
+if [ $# -eq 1 ]
+then
+	sudo -u "$1" whoami
+fi
