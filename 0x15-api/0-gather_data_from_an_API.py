@@ -6,7 +6,7 @@ from sys import argv
 
 def todo_list(user_id):
     """Return todo list info """
-    url = "https://jsonplaceholder.typicode.com/todos/1"
+    url = "https://jsonplaceholder.typicode.com"
     user_url = "{}/users/{}".format(url, user_id)
     username = requests.get(user_url).json().get('name')
     tasks = requests.get('{}/todos?userId={}'.format(url, user_id)).json()
